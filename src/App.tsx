@@ -217,6 +217,14 @@ function App() {
               GitHub repo ↗
             </a>
             <a
+              href="https://www.npmjs.com/package/@openbouncer/gate"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-ink"
+            >
+              npm · @openbouncer/gate ↗
+            </a>
+            <a
               href="https://x.com/OpenBouncer"
               target="_blank"
               rel="noreferrer"

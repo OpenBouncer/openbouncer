@@ -2,10 +2,15 @@
 
 **A reverse-captcha gateway for the agentic web.**
 
+[![npm](https://img.shields.io/npm/v/@openbouncer/gate/preview?label=%40openbouncer%2Fgate&color=000)](https://www.npmjs.com/package/@openbouncer/gate)
+[![license](https://img.shields.io/badge/license-MIT-000)](./LICENSE)
+[![live](https://img.shields.io/badge/live-openbouncer.com-c8331f)](https://openbouncer.com)
+
 Cloudflare protects sites from bots. OpenBouncer protects agent-only spaces
 from *humans* — and routes verified agents to the sites that want them.
 
 - Public preview live at **[openbouncer.com](https://openbouncer.com)**
+- npm: **[`@openbouncer/gate@preview`](https://www.npmjs.com/package/@openbouncer/gate)**
 - v0.1.draft · MIT licensed · built in the open
 
 ---
@@ -73,12 +78,17 @@ curl https://openbouncer.com/api/challenge
 
 ## Embed the gate on your site
 
+```sh
+bun add @openbouncer/gate@preview
+# or: npm install @openbouncer/gate@preview
+```
+
 ```tsx
 import { OpenBouncerGate } from '@openbouncer/gate'
 
-export default function ProtectedPage() {
+export default function ProtectedPage({ nonce }: { nonce: string }) {
   return (
-    <OpenBouncerGate endpoint="https://openbouncer.com/api/verify">
+    <OpenBouncerGate nonce={nonce} provider="anthropic">
       {/* rendered only for verified agents */}
       <YourAgentOnlyContent />
     </OpenBouncerGate>
@@ -86,8 +96,24 @@ export default function ProtectedPage() {
 }
 ```
 
-Three lines. The package above ships in v0.2; today the component lives at
-`src/components/OpenBouncerGate.tsx` in this repo.
+Three lines. Headless: zero CSS dependency, inline-styled defaults, ESM +
+CJS + `.d.ts`, ~24 KB unpacked. See
+[`packages/gate/README.md`](./packages/gate/README.md) for the full API
+reference.
+
+For non-React runtimes (Bun, Node, Workers, CLIs), import the pure async
+primitive:
+
+```ts
+import { verify } from '@openbouncer/gate'
+
+const r = await verify({
+  nonce: 'ob_demo_a8f3c9e2',
+  provider: 'anthropic',
+  attest: '<signed-provider-token>',
+})
+// → { ok: true, decision: "pass", matched_layers: [1,4], token: "ob_..." }
+```
 
 ## Repo layout
 
@@ -163,9 +189,11 @@ integration in the Cloudflare Pages dashboard for auto-deploy on push to
 | `/api/verify` (L1 + L4 stub) | ✅ live |
 | `/api/challenge` (fresh nonce) | ✅ live |
 | `/.well-known/openbouncer.json` | ✅ live |
+| `@openbouncer/gate` npm package | ✅ published (preview tag) |
 | Per-session nonce store | ⏳ v0.2 |
 | Ed25519-signed pass tokens | ⏳ v0.2 |
 | Real provider-attestation verification | ⏳ v0.2 |
+| Stable `@openbouncer/gate` on the `latest` tag | ⏳ v0.2 |
 | Public registry UI | ⏳ v0.2 |
 | MCP server for agent discovery | ⏳ v0.2 |
 
