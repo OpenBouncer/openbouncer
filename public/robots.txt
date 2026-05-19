@@ -1,0 +1,14 @@
+# OpenBouncer — robots policy
+#
+# Humans crawlers welcome. AI agents are first-class here — see
+# /.well-known/openbouncer.json for the protocol discovery document.
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://openbouncer.com/sitemap.xml
+
+# OpenBouncer protocol discovery
+# Agents implementing the OpenBouncer spec read the document at the path below.
+OpenBouncer-Discovery: /.well-known/openbouncer.json

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#FAFAF7" />
+    <link rel="icon" type="image/jpeg" href="/openbouncer-logo.jpg" />
+    <title>404 · OpenBouncer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --page: #fafaf7;
+        --ink: #0e0e0c;
+        --ink-soft: #2a2924;
+        --ink-mute: #6c6a65;
+        --ink-faint: #a8a59c;
+        --rule: #e3e0d8;
+        --stamp: #c8331f;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      body {
+        min-height: 100svh;
+        background: var(--page);
+        color: var(--ink);
+        font-family: 'Inter Tight', ui-sans-serif, system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+      .grid {
+        min-height: 100svh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+      }
+      header, footer {
+        border-bottom: 1px solid var(--rule);
+      }
+      footer {
+        border-top: 1px solid var(--rule);
+        border-bottom: none;
+      }
+      .wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 16px 20px;
+      }
+      header .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 56px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: var(--ink);
+      }
+      .brand .name { font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 600; font-size: 13px; letter-spacing: -0.02em; }
+      .brand .v { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint); }
+
+      main { display: grid; place-items: center; padding: 64px 20px; }
+      .stack { max-width: 720px; }
+      .eye {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 11px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--stamp);
+        margin: 0 0 16px;
+      }
+      h1 {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-weight: 500;
+        font-size: clamp(36px, 8vw, 72px);
+        letter-spacing: -0.035em;
+        line-height: 0.98;
+        margin: 0 0 24px;
+      }
+      h1 .strike {
+        position: relative;
+        display: inline-block;
+        color: var(--ink-mute);
+      }
+      h1 .strike::after {
+        content: '';
+        position: absolute;
+        left: -2%;
+        right: -2%;
+        top: 52%;
+        height: 0.08em;
+        background: var(--stamp);
+      }
+      p { font-size: 17px; line-height: 1.55; color: var(--ink-soft); margin: 0 0 32px; max-width: 56ch; }
+      .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+      a.btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 16px;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 12.5px;
+        text-decoration: none;
+        transition: background-color 120ms, color 120ms, border-color 120ms;
+      }
+      a.btn.primary {
+        background: var(--ink);
+        color: var(--page);
+      }
+      a.btn.primary:hover { background: var(--stamp); }
+      a.btn.secondary {
+        border: 1px solid var(--ink);
+        color: var(--ink);
+      }
+      a.btn.secondary:hover { border-color: var(--stamp); color: var(--stamp); }
+
+      footer .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 20px;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+      }
+      .ring {
+        width: 22px; height: 22px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <header>
+        <div class="wrap">
+          <a class="brand" href="/">
+            <svg viewBox="0 0 100 100" class="ring" aria-hidden="true">
+              <defs>
+                <pattern id="h" width="3" height="3" patternUnits="userSpaceOnUse">
+                  <line x1="0" y1="1" x2="3" y2="1" stroke="currentColor" stroke-width="1.4"/>
+                </pattern>
+                <pattern id="d" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                  <line x1="0" y1="0" x2="0" y2="4" stroke="currentColor" stroke-width="1.4"/>
+                </pattern>
+                <pattern id="x" width="3.4" height="3.4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                  <line x1="0" y1="0" x2="0" y2="3.4" stroke="currentColor" stroke-width="0.9"/>
+                  <line x1="0" y1="0" x2="3.4" y2="0" stroke="currentColor" stroke-width="0.9"/>
+                </pattern>
+                <mask id="r">
+                  <rect width="100" height="100" fill="black"/>
+                  <circle cx="50" cy="50" r="46" fill="white"/>
+                  <circle cx="50" cy="50" r="28" fill="black"/>
+                  <rect x="0" y="45" width="100" height="10" fill="black"/>
+                  <rect x="49.2" y="0" width="1.6" height="100" fill="black"/>
+                </mask>
+              </defs>
+              <g mask="url(#r)" color="#0e0e0c">
+                <rect x="0" y="0" width="50" height="50" fill="url(#h)"/>
+                <rect x="50" y="0" width="50" height="50" fill="url(#d)"/>
+                <rect x="0" y="50" width="50" height="50" fill="url(#x)"/>
+                <rect x="50" y="50" width="50" height="50" fill="currentColor"/>
+              </g>
+            </svg>
+            <span class="name">openbouncer</span>
+            <span class="v">v0.1</span>
+          </a>
+          <a class="brand mono" href="/" style="font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-mute);">
+            ← Back to /
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <div class="stack">
+          <p class="eye">404 · door not found</p>
+          <h1>
+            This corridor<br>does <span class="strike">not</span> exist.
+          </h1>
+          <p>
+            You followed a link to a page that is not part of OpenBouncer. The
+            gate, the spec, the registry — all live on the main page. The
+            verify endpoint lives at <span class="mono" style="color: var(--ink);">/api/verify</span>.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="/">Main entrance →</a>
+            <a class="btn secondary" href="/.well-known/openbouncer.json">.well-known discovery</a>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="wrap">
+          <span>© 2026 OpenBouncer · MIT</span>
+          <span>Cloudflare for agents</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

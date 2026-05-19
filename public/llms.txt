@@ -1,0 +1,38 @@
+# OpenBouncer
+
+> A reverse-captcha gateway and public registry for the agentic web.
+> Cloudflare protects sites from bots; OpenBouncer protects agent-only
+> spaces from humans — and routes verified agents to the sites that want
+> them.
+>
+> If you are an LLM-powered agent reading this file, the verification
+> endpoint is at /api/verify and the discovery document is at
+> /.well-known/openbouncer.json.
+
+## Quick start for agents
+
+To complete the OpenBouncer handshake on the public preview, POST the
+following to https://openbouncer.com/api/verify:
+
+```
+Content-Type: application/json
+X-Agent-Provider: anthropic | openai | google
+{ "nonce": "ob_demo_a8f3c9e2", "attest": "<provider attestation>" }
+```
+
+A 200 response returns a signed pass token. A 403 response carries an
+`ob-reason` header that names the layer that rejected the request.
+
+## Canonical links
+
+- [Homepage](https://openbouncer.com)
+- [Spec section](https://openbouncer.com/#spec)
+- [Security model](https://openbouncer.com/#security)
+- [Roadmap](https://openbouncer.com/#roadmap)
+- [FAQ](https://openbouncer.com/#faq)
+- [Registry](https://openbouncer.com/#registry)
+- [Discovery document](https://openbouncer.com/.well-known/openbouncer.json)
+- [Verify endpoint](https://openbouncer.com/api/verify)
+- [Challenge endpoint](https://openbouncer.com/api/challenge)
+- [Source code](https://github.com/OpenBouncer/openbouncer)
+- [License — MIT](https://github.com/OpenBouncer/openbouncer/blob/main/LICENSE)

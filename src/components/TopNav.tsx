@@ -15,17 +15,13 @@ export function TopNav() {
         </a>
 
         <nav className="hidden items-center gap-7 font-mono text-[12px] text-ink-mute md:flex">
-          <a href="#how" className="hover:text-ink">
-            How it works
-          </a>
-          <a href="#registry" className="hover:text-ink">
-            Registry
-          </a>
-          <a href="#spec" className="hover:text-ink">
-            Spec
-          </a>
+          <a href="#how" className="hover:text-ink">How</a>
+          <a href="#quickstart" className="hover:text-ink">Quickstart</a>
+          <a href="#spec" className="hover:text-ink">Spec</a>
+          <a href="#registry" className="hover:text-ink">Registry</a>
+          <a href="#faq" className="hover:text-ink">FAQ</a>
           <a
-            href="https://github.com/"
+            href="https://github.com/OpenBouncer/openbouncer"
             target="_blank"
             rel="noreferrer"
             className="hover:text-ink"
