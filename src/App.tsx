@@ -1,6 +1,7 @@
 import { FAQ } from './components/FAQ'
 import { FeatureRow } from './components/FeatureRow'
 import { Hero } from './components/Hero'
+import { Holders } from './components/Holders'
 import { Logomark } from './components/Logomark'
 import { OpenBouncerGate } from './components/OpenBouncerGate'
 import { Quickstart } from './components/Quickstart'
@@ -131,7 +132,10 @@ function App() {
         {/* 08 · Roadmap */}
         <Roadmap />
 
-        {/* 09 · FAQ */}
+        {/* 09 · For $OB holders */}
+        <Holders />
+
+        {/* 10 · FAQ */}
         <FAQ />
 
         {/* CTA strip */}
@@ -197,6 +201,7 @@ function App() {
             <a href="#spec" className="hover:text-ink">Protocol spec</a>
             <a href="#security" className="hover:text-ink">Security model</a>
             <a href="#roadmap" className="hover:text-ink">Roadmap</a>
+            <a href="#holders" className="hover:text-ink">For $OB holders</a>
             <a href="#faq" className="hover:text-ink">FAQ</a>
             <a
               href="/.well-known/openbouncer.json"
@@ -231,6 +236,14 @@ function App() {
               className="hover:text-ink"
             >
               X · @OpenBouncer ↗
+            </a>
+            <a
+              href="https://pump.fun/coin/4QyAdfEMBmPgMqtVy1gd6NthGsHzMctobUVEJqpwpump"
+              target="_blank"
+              rel="noreferrer"
+              className="text-stamp hover:text-ink"
+            >
+              $OB · pump.fun ↗
             </a>
             <a
               href="https://github.com/OpenBouncer/openbouncer/issues"

@@ -5,12 +5,14 @@
 [![npm](https://img.shields.io/npm/v/@openbouncer/gate/preview?label=%40openbouncer%2Fgate&color=000)](https://www.npmjs.com/package/@openbouncer/gate)
 [![license](https://img.shields.io/badge/license-MIT-000)](./LICENSE)
 [![live](https://img.shields.io/badge/live-openbouncer.com-c8331f)](https://openbouncer.com)
+[![token](https://img.shields.io/badge/%24OB-pump.fun-c8331f)](https://pump.fun/coin/4QyAdfEMBmPgMqtVy1gd6NthGsHzMctobUVEJqpwpump)
 
 Cloudflare protects sites from bots. OpenBouncer protects agent-only spaces
 from *humans* — and routes verified agents to the sites that want them.
 
 - Public preview live at **[openbouncer.com](https://openbouncer.com)**
 - npm: **[`@openbouncer/gate@preview`](https://www.npmjs.com/package/@openbouncer/gate)**
+- Community token `$OB` live on **[pump.fun](https://pump.fun/coin/4QyAdfEMBmPgMqtVy1gd6NthGsHzMctobUVEJqpwpump)** — creator rewards fund the build, holders unlock premium tiers ([see `#holders`](https://openbouncer.com/#holders))
 - v0.1.draft · MIT licensed · built in the open
 
 ---

@@ -19,6 +19,7 @@ export function TopNav() {
           <a href="#quickstart" className="hover:text-ink">Quickstart</a>
           <a href="#spec" className="hover:text-ink">Spec</a>
           <a href="#registry" className="hover:text-ink">Registry</a>
+          <a href="#holders" className="text-stamp hover:text-ink">$OB</a>
           <a href="#faq" className="hover:text-ink">FAQ</a>
           <a
             href="https://github.com/OpenBouncer/openbouncer"

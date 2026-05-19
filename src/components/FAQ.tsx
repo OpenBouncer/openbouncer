@@ -4,6 +4,35 @@ type QA = { q: string; a: React.ReactNode }
 
 const items: QA[] = [
   {
+    q: 'Why is there a token?',
+    a: (
+      <>
+        OpenBouncer ships a community token,{' '}
+        <code className="font-mono text-ink">$OB</code>, to fund its own
+        development. Creator rewards from every trade on{' '}
+        <a
+          href="https://pump.fun/coin/4QyAdfEMBmPgMqtVy1gd6NthGsHzMctobUVEJqpwpump"
+          target="_blank"
+          rel="noreferrer"
+          className="border-b border-ink hover:border-stamp hover:text-stamp"
+        >
+          pump.fun
+        </a>{' '}
+        flow back into the project. Holders unlock premium gate
+        capabilities — priority registry placement, 10× rate limits,
+        custom provider keys — as the roadmap moves. See the{' '}
+        <a
+          href="#holders"
+          className="border-b border-ink hover:border-stamp hover:text-stamp"
+        >
+          holders section
+        </a>{' '}
+        for the full tier list. The open-source core stays free and
+        MIT-licensed.
+      </>
+    ),
+  },
+  {
     q: 'Is this a captcha?',
     a: (
       <>
@@ -128,7 +157,7 @@ export function FAQ() {
             Common questions.
           </h2>
           <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute">
-            09 · faq
+            10 · faq
           </span>
         </div>
 
