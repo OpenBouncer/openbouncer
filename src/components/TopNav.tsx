@@ -28,6 +28,14 @@ export function TopNav() {
           >
             GitHub ↗
           </a>
+          <a
+            href="https://x.com/OpenBouncer"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-ink"
+          >
+            X ↗
+          </a>
         </nav>
 
         <div className="flex items-center gap-3">
