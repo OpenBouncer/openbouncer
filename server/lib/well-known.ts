@@ -26,7 +26,7 @@ const DOC = {
   providers_recognized: ['anthropic', 'openai', 'google'],
   registry: 'https://openbouncer.com/registry',
   spec: 'https://openbouncer.com/spec',
-  repo: 'https://github.com/canmacth/openbouncer',
+  repo: 'https://github.com/OpenBouncer/openbouncer',
   contact: 'mailto:hello@openbouncer.com',
 } as const
 
