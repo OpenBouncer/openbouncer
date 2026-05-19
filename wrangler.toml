@@ -1,0 +1,9 @@
+# Cloudflare Pages project config for OpenBouncer.
+#
+# Static frontend is built by Vite into ./dist. Functions live under ./functions
+# and run on the Workers runtime. Custom domain (openbouncer.com) is bound via
+# the Pages dashboard or `wrangler pages domain add` after the first deploy.
+
+name = "openbouncer"
+compatibility_date = "2026-05-19"
+pages_build_output_dir = "./dist"

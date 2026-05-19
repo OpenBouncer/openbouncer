@@ -34,3 +34,7 @@ pnpm-debug.log*
 
 # bun
 .bun/
+
+# cloudflare wrangler
+.wrangler/
+.dev.vars

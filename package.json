@@ -9,13 +9,15 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "server": "bun run server/index.ts",
-    "typecheck": "tsc -b --noEmit"
+    "typecheck": "tsc -b --noEmit",
+    "deploy": "bun run build && wrangler pages deploy dist --project-name=openbouncer --commit-dirty=true"
   },
   "dependencies": {
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260519.1",
     "@eslint/js": "^10.0.1",
     "@tailwindcss/vite": "^4.3.0",
     "@types/node": "^24.12.3",
@@ -31,6 +33,7 @@
     "tailwindcss": "^4.3.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.2",
-    "vite": "^8.0.12"
+    "vite": "^8.0.12",
+    "wrangler": "^4.93.0"
   }
 }

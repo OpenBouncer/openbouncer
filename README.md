@@ -126,6 +126,35 @@ bun run typecheck         # tsc -b
 bun run build             # vite build
 ```
 
+## Deploy
+
+OpenBouncer ships as a single Cloudflare Pages project: the Vite-built
+static site under `dist/` plus a `functions/[[path]].ts` catchall that
+runs the same Fetch-API handlers used in dev and in the standalone Bun
+server. One origin, no CORS dance, edge-deployed globally.
+
+```sh
+bunx wrangler login                  # one-time, opens browser
+bun run deploy                       # bun run build + wrangler pages deploy
+```
+
+`bun run deploy` is sugar for:
+
+```sh
+wrangler pages deploy dist --project-name=openbouncer
+```
+
+To bind the custom domain (after the first deploy creates the project):
+
+```sh
+bunx wrangler pages domain add openbouncer.com --project-name=openbouncer
+```
+
+Cloudflare provisions the SSL cert automatically once DNS is verified.
+Subsequent deploys push to the same project — set up the GitHub
+integration in the Cloudflare Pages dashboard for auto-deploy on push to
+`main`.
+
 ## Status (v0.1.draft, May 2026)
 
 | Surface | State |
