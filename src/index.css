@@ -1,0 +1,109 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-page: #fafaf7;
+  --color-page-2: #f3f1eb;
+  --color-surface: #ffffff;
+  --color-ink: #0e0e0c;
+  --color-ink-soft: #2a2924;
+  --color-ink-mute: #6c6a65;
+  --color-ink-faint: #a8a59c;
+  --color-rule: #e3e0d8;
+  --color-rule-strong: #c9c5b9;
+  --color-stamp: #c8331f;
+  --color-stamp-deep: #9b2515;
+  --color-night: #0e0e0c;
+  --color-night-2: #1a1916;
+  --color-night-soft: #cdc9be;
+
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-sans: 'Inter Tight', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+:root {
+  color-scheme: light;
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: 'kern', 'liga', 'tnum', 'cv11';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100svh;
+  background: var(--color-page);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-ink);
+  color: var(--color-page);
+}
+
+/* Hidden agent-only text. Sits in body; invisible to humans; revealed
+   only on selection. The Cmd+A reveal is an Easter egg, not the centerpiece. */
+.agent-only {
+  color: var(--color-page);
+  user-select: text;
+}
+.agent-only::selection {
+  background: var(--color-stamp);
+  color: var(--color-page);
+}
+
+/* Mono display utility — opinionated headline style */
+.mono-display {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+  font-feature-settings: 'ss01', 'ss02', 'ss03', 'zero', 'cv11';
+}
+
+/* Subtle micro-detail: tabular numbers in mono */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Code surface */
+.code-surface {
+  background: var(--color-night);
+  color: var(--color-night-soft);
+  font-family: var(--font-mono);
+}
+.code-surface .ln {
+  color: #4a4943;
+  user-select: none;
+  display: inline-block;
+  width: 2.4em;
+  text-align: right;
+  padding-right: 1em;
+  font-variant-numeric: tabular-nums;
+}
+.code-surface .punct { color: #6a685f; }
+.code-surface .key { color: #cdc9be; }
+.code-surface .str { color: #d8b46a; }
+.code-surface .cmt { color: #6a685f; font-style: italic; }
+.code-surface .cmd { color: #b8e07f; }
+.code-surface .url { color: #cdc9be; }
+.code-surface .ok { color: #b8e07f; }
+.code-surface .stamp { color: #e88373; }
+
+/* Hairline diagonal hatched fill for the "stamp ribbon" element */
+.hatch {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--color-ink) 0 1px,
+    transparent 1px 6px
+  );
+}
+
+/* Generic ruled-row separators used in features list */
+.ruled > * + * {
+  border-top: 1px solid var(--color-rule);
+}
