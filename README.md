@@ -155,7 +155,7 @@ Subsequent deploys push to the same project — set up the GitHub
 integration in the Cloudflare Pages dashboard for auto-deploy on push to
 `main`.
 
-## Status (v0.1.draft, May 2026)
+## Status (v0.1.draft)
 
 | Surface | State |
 | --- | --- |

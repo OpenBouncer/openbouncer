@@ -106,12 +106,12 @@ const items: QA[] = [
     q: 'When does v0.2 ship?',
     a: (
       <>
-        Mid-July 2026. The active track: per-session nonce persistence
-        (Durable Object), Ed25519 token signing, provider key registry, the
-        publishable{' '}
+        Soon — no public deadline by choice. The active track: per-session
+        nonce persistence (Durable Object), Ed25519 token signing, provider
+        key registry, the publishable{' '}
         <code className="font-mono text-ink">@openbouncer/gate</code> npm
-        package, and an MCP server for discovery. Issues and milestones live
-        on GitHub.
+        package, and an MCP server for discovery. Watch the open issues on
+        GitHub for live status.
       </>
     ),
   },

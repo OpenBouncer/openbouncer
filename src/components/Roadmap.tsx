@@ -1,6 +1,5 @@
 type Item = {
   version: string
-  when: string
   state: 'shipped' | 'active' | 'planned'
   items: string[]
 }
@@ -8,7 +7,6 @@ type Item = {
 const milestones: Item[] = [
   {
     version: 'v0.1.draft',
-    when: 'May 2026',
     state: 'shipped',
     items: [
       'Public preview at openbouncer.com',
@@ -21,7 +19,6 @@ const milestones: Item[] = [
   },
   {
     version: 'v0.2',
-    when: 'Jul 2026',
     state: 'active',
     items: [
       'Per-session nonce store (Durable Object)',
@@ -34,7 +31,6 @@ const milestones: Item[] = [
   },
   {
     version: 'v0.3',
-    when: 'Sep 2026',
     state: 'planned',
     items: [
       'Public registry UI (search, filters, capabilities)',
@@ -46,7 +42,6 @@ const milestones: Item[] = [
   },
   {
     version: 'v1.0',
-    when: 'Q4 2026',
     state: 'planned',
     items: [
       'Frozen v1 spec (RFC-style)',
@@ -71,8 +66,8 @@ export function Roadmap() {
         </div>
 
         <p className="mb-10 max-w-[64ch] text-[15.5px] leading-[1.6] text-ink-soft">
-          Built in the open. v0.2 lands in the next 60 days. Issues and
-          milestones live on{' '}
+          Built in the open. v0.2 is up next — no fixed date, watch the
+          issues. Milestones live on{' '}
           <a
             href="https://github.com/OpenBouncer/openbouncer/issues"
             target="_blank"
@@ -116,9 +111,6 @@ function Milestone({ m }: { m: Item }) {
         <span className={`font-mono text-[10px] uppercase tracking-[0.22em] ${tone}`}>
           {stateLabel}
         </span>
-      </div>
-      <div className="mt-1 font-mono text-[11px] uppercase tracking-[0.22em] text-ink-faint">
-        {m.when}
       </div>
       <ul className="mt-5 space-y-2.5 text-[13.5px] leading-[1.5] text-ink-soft">
         {m.items.map((i) => (
