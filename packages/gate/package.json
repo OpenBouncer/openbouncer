@@ -1,0 +1,64 @@
+{
+  "name": "@openbouncer/gate",
+  "version": "0.1.0",
+  "description": "Reverse-captcha gate for the agentic web — a React wrapper that admits verified AI agents and politely turns humans away. Three lines to install.",
+  "license": "MIT",
+  "author": "OpenBouncer <hi@openbouncer.com>",
+  "homepage": "https://openbouncer.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OpenBouncer/openbouncer.git",
+    "directory": "packages/gate"
+  },
+  "bugs": {
+    "url": "https://github.com/OpenBouncer/openbouncer/issues"
+  },
+  "keywords": [
+    "openbouncer",
+    "reverse-captcha",
+    "captcha",
+    "agentic-web",
+    "agents",
+    "mcp",
+    "llm",
+    "cloudflare-for-agents",
+    "react"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepack": "bun run build"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "react": "^19.0.0",
+    "tsup": "^8.5.0",
+    "typescript": "^6.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "preview"
+  }
+}

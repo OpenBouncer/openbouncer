@@ -15,12 +15,11 @@ export function Quickstart() {
           <Step
             n="01"
             title="Install the gate"
-            note="npm package ships in v0.2 — for now drop the component into src/"
+            note="Published under the preview tag while v0.1.draft hardens. Pin versions in production."
           >
-{`bun add @openbouncer/gate
-# coming v0.2 · today: copy
-# src/components/OpenBouncerGate.tsx
-# from the repo`}
+{`bun add @openbouncer/gate@preview
+# or:
+npm install @openbouncer/gate@preview`}
           </Step>
           <Step
             n="02"
